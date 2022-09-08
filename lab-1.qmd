@@ -1,6 +1,6 @@
 ---
 title: "Lab 1 - Data visualization"
-author: "[Melissa Rodriguez]"
+author: "Melissa Rodriguez"
 format: pdf
 editor: visual
 ---
