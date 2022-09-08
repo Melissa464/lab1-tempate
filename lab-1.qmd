@@ -54,9 +54,30 @@ ggplot(data = midwest,
        y = "Percentage Below Poverty", 
        title = "College Degree \nvs Below Poverty")
 ```
+I prefer this plot because the lines appear smoother and properly show the trends among the states. I found it harder to see the trends in other graph because they were all compiled into one.
 
 ## Exercise 5
+```{r Ex-5, message = FALSE}
+ggplot(data = midwest, 
+       mapping = aes(x = state, y = area, fill = state)) +
+  scale_color_viridis_d() +
+  geom_boxplot() +
+  labs(x = "Counties", 
+       y = "Area", 
+       title = "Do some states have counties that tend to be\n geographically larger than others?")
+```
 
 ## Exercise 6
+```{r Ex-6, message = FALSE}
+midwest <- midwest |>
+  mutate(metro = if_else(inmetro == 1, "Yes", "No"))
+ggplot(data = midwest, 
+       mapping = aes(x = state, fill = metro)) +
+  scale_color_viridis_d() +
+  geom_bar(position = "fill") +
+  labs(x = "States", 
+       y = "Count", 
+       title = "Do some states have a higher percentage of\n their counties located in a metropolitan area?")
+```
 
 ## Exercise 7
