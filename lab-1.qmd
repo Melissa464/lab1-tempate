@@ -17,15 +17,34 @@ library(viridis)
 
 ## Exercise 1
 
-(Type your answer to Exercise 1 here. Add code chunks as needed. Don't forget to label your code chunk. Do not use spaces in code chunk labels.)
+```{r ex-1, message = FALSE}
+ggplot(data = midwest, mapping = aes(x = popdensity)) + 
+  geom_histogram(binwidth = 10000) +
+  labs(x = "County", 
+       y = "Population Density", 
+       title = "Counties \nvs Population Density")
+```
+The graph is right-skewed because there is a tail of data on the right. Additionally, there appears to be some outliers in between 50000 and 75000 and another between 75000 and 1000. 
 
 ## Exercise 2
 
 (Type your answer to Exercise 2 here. Add code chunks as needed. Don't forget to label your code chunk. Do not use spaces in code chunk labels.)
 
+```{r ex-2, message = FALSE}
+ggplot(data = midwest, 
+       mapping = aes(x = percollege, y = percbelowpoverty , color = state)) +
+  scale_color_viridis_d() + 
+  geom_point() +
+  labs(x = "People With a College Degree", 
+       y = "Percentage Below Poverty", 
+       title = "College Degree \nvs Below Poverty")
+
+
+```
+
 ## Exercise 3
 
-(Type your answer to Exercise 3 here. Add code chunks as needed. Don't forget to label your code chunk. Do not use spaces in code chunk labels.)
+There is a negative association between people with a college degree and those below poverty. In most of the states, 5%-20% of 10%-25% of people with a college degree are below poverty. 
 
 ## Exercise 4
 
