@@ -72,11 +72,7 @@ ggplot(data = midwest,
        title = "Do some states have counties that tend to be\n geographically larger than others?")
 ```
 
--   Describe what you observe from the plot.
-
--   
-
--   Which state has the single largest county? How do you know based on the plot?
+For states like IL, MI, and WI, the distribution of data was larger whereas for IN and OH the distribution was smaller. Additionally, states where most counties where above the median were IL, MI, and OH. Michigan has the largest county because its last dot, which represents the max, is farthest among all the states and therefore the largest geographically.
 
 ## Exercise 6
 
@@ -91,6 +87,8 @@ ggplot(data = midwest,
        y = "Proportion", 
        title = "Proportion of counties in a metropolitan area by state")
 ```
+
+More than 50% of counties in each state are not in a metropolitan area.
 
 ## Exercise 7
 
