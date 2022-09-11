@@ -64,13 +64,19 @@ I prefer this plot because the lines appear smoother and properly show the trend
 
 ```{r Ex-5, message = FALSE}
 ggplot(data = midwest, 
-       mapping = aes(x = state, y = area, fill = state)) +
+       mapping = aes(x = area, y = state, fill = state)) +
   scale_color_viridis_d() +
   geom_boxplot() +
-  labs(x = "Counties", 
+  labs(x = "States", 
        y = "Area", 
        title = "Do some states have counties that tend to be\n geographically larger than others?")
 ```
+
+-   Describe what you observe from the plot.
+
+-   
+
+-   Which state has the single largest county? How do you know based on the plot?
 
 ## Exercise 6
 
@@ -82,8 +88,21 @@ ggplot(data = midwest,
   scale_color_viridis_d() +
   geom_bar(position = "fill") +
   labs(x = "States", 
-       y = "Count", 
-       title = "Do some states have a higher percentage of\n their counties located in a metropolitan area?")
+       y = "Proportion", 
+       title = "Proportion of counties in a metropolitan area by state")
 ```
 
 ## Exercise 7
+
+![]()
+
+```{r Ex. 7, message=FALSE}
+ggplot(data = midwest, 
+       mapping = aes(x= percollege, y = popdensity, color = percbelowpoverty)) +
+  geom_point(alpha = .5, size = 2) +
+  labs( color = "% below poverty line", x = "% College Educated", 
+       y = "Population Density (person / unit area)", 
+       title = "Do people with college degrees tend to live in denser areas?") +
+  facet_wrap(~state) +
+  theme_minimal() 
+```
