@@ -29,8 +29,6 @@ The graph is right-skewed because there is a tail of data on the right. Addition
 
 ## Exercise 2
 
-(Type your answer to Exercise 2 here. Add code chunks as needed. Don't forget to label your code chunk. Do not use spaces in code chunk labels.)
-
 ```{r ex-2, message = FALSE}
 ggplot(data = midwest, 
        mapping = aes(x = percollege, y = percbelowpoverty , color = state)) +
@@ -43,7 +41,7 @@ ggplot(data = midwest,
 
 ## Exercise 3
 
-There is a negative association between people with a college degree and those below poverty. In most of the states, 5%-20% of 10%-25% of people with a college degree are below poverty. Additionlly, As the percentage of people with a college degree increases, the percentage of people below poverty decreases and vice versa.
+There is a negative association between people with a college degree and those below poverty. In most of the states, 5%-20% of 10%-25% of people with a college degree are below poverty. Additionally, as the percentage of people with a college degree increases, the percentage of people below poverty decreases and vice versa.
 
 ## Exercise 4
 
@@ -58,7 +56,7 @@ ggplot(data = midwest,
        title = "College Degree \nvs Below Poverty")
 ```
 
-I prefer this plot because the lines appear smoother and properly show the trends among the states. I found it harder to see the trends in other graph because they were all compiled into one.
+I prefer this plot because the lines appear smoother and properly show the trends among the states. I found it harder to see the trends in the other graph because they were all compiled into one.
 
 ## Exercise 5
 
@@ -69,7 +67,8 @@ ggplot(data = midwest,
   geom_boxplot() +
   labs(x = "States", 
        y = "Area", 
-       title = "Do some states have counties that tend to be\n geographically larger than others?")
+       title = "Do some states have counties that tend to be\n
+geographically larger than others?")
 ```
 
 For states like IL, MI, and WI, the distribution of data was larger whereas for IN and OH the distribution was smaller. Additionally, states where most counties where above the median were IL, MI, and OH. Michigan has the largest county because its last dot, which represents the max, is farthest among all the states and therefore the largest geographically.
@@ -91,8 +90,6 @@ ggplot(data = midwest,
 More than 50% of counties in each state are not in a metropolitan area.
 
 ## Exercise 7
-
-![]()
 
 ```{r Ex. 7, message=FALSE}
 ggplot(data = midwest, 
